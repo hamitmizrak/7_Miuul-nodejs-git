@@ -16,7 +16,9 @@
 // console.log(number2);
 // console.log(number2);
 
-////////////////////////////////number1
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 // ES5
 // "use strict";
 // String Access
@@ -170,7 +172,7 @@ let everyFunction = () => {
 let someFunction = () => {
     let array = [1, 2, 3, 9, 5];
     let isResult = array.some((number) => {
-        return number %2===0;
+        return number % 2 === 0;
     })
     const data = (isResult) ? " Bir tane şart sağlıyor" : "sağlamıyor";
     console.log(data);
@@ -181,16 +183,92 @@ let someFunction = () => {
 let indexOfFunction = () => {
     let array = [1, 2, 3, 9, 2];
     let isResult = array.indexOf(2);
-    console.log("soldan arama:" +isResult);
+    console.log("soldan arama:" + isResult);
 
 }
-indexOfFunction();
+//indexOfFunction();
 
 //ES5(2009) 13-  LastIndexOf(SAğdan arama)
 let lastIndexOfFunction = () => {
     let array = [1, 2, 3, 9, 2];
     let isResult = array.lastIndexOf(2);
-    console.log("sağdan  arama:"+isResult);
+    console.log("sağdan  arama:" + isResult);
 
 }
-lastIndexOfFunction();
+//lastIndexOfFunction();
+
+//ES5(2009) 14-  getter(okuma)
+let getterFunction = () => {
+    const person = {
+        _username: 'Hamit',
+
+        get username() {
+            console.log("Getting username");
+            return this._username;
+        }
+    } //end person
+    console.log(person.username);
+
+}
+//getterFunction();
+
+
+//ES5(2009) 15-  setter(yazma)
+let setterFunction = () => {
+    const person = {
+        _username: '',
+
+        set username(value) {
+            console.log("Setting username");
+            this._username=value;
+        }
+    } //end person
+    person.username="Hamit";
+    console.log(person._username);
+
+}
+//setterFunction();
+
+//ES5(2009) 16-  Rezerve
+let rezerveFunction = () => {
+    const rezerveObject = {
+        class:"Class Adı 44",
+        function:"Function Adı 44",
+       
+    } //end rezerveObject
+    console.log(rezerveObject.class);
+    console.log(rezerveObject.function);
+    console.log(rezerveObject['function']);
+
+}
+//rezerveFunction();
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// ES6(2015)
+// let 
+// const 
+// arrow Function
+
+//ES5(20015) 1-  let,const,arrow function
+let letConstArrowFunction = () => {
+    var varData=44;
+    console.log(varData);
+    var varData=23;
+    console.log(varData);
+
+    let letData=11;
+    console.log(letData);
+     letData=22;
+    console.log(letData);
+
+    const constData=33;
+    console.log(constData);
+}
+letConstArrowFunction();
+
+// Norm Fuction
+// Immedia Function
+// Anonymous Function
+// Arrow Function
