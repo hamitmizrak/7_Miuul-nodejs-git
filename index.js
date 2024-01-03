@@ -233,10 +233,10 @@ let setterFunction = () => {
 
         set username(value) {
             console.log("Setting username");
-            this._username=value;
+            this._username = value;
         }
     } //end person
-    person.username="Hamit";
+    person.username = "Hamit";
     console.log(person._username);
 
 }
@@ -245,9 +245,9 @@ let setterFunction = () => {
 //ES5(2009) 16-  Rezerve
 let rezerveFunction = () => {
     const rezerveObject = {
-        class:"Class Adı 44",
-        function:"Function Adı 44",
-       
+        class: "Class Adı 44",
+        function: "Function Adı 44",
+
     } //end rezerveObject
     console.log(rezerveObject.class);
     console.log(rezerveObject.function);
@@ -260,28 +260,65 @@ let rezerveFunction = () => {
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 // ES6(2015)
-// let 
-// const 
-// arrow Function
+// 1- let 
+// 2- const 
+// 3- arrow Function
+// 4- for of
+// 5- The Operator (Spread Operator) ...
+// 6- Function Rest Parameter...
 
 //ES5(20015) 1-  let,const,arrow function
 let letConstArrowFunction = () => {
-    var varData=44;
+    var varData = 44;
     console.log(varData);
-    var varData=23;
+    var varData = 23;
     console.log(varData);
 
-    let letData=11;
+    let letData = 11;
     console.log(letData);
-     letData=22;
+    letData = 22;
     console.log(letData);
 
-    const constData=33;
+    const constData = 33;
     console.log(constData);
 }
-letConstArrowFunction();
+//letConstArrowFunction();
 
 // Norm Fuction
 // Immedia Function
 // Anonymous Function
 // Arrow Function
+
+
+
+//ES5(20015)  4- for of
+let forOfArrowFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    for (let data of array) {
+        console.log(data);
+    }
+}
+//forOfArrowFunction()
+
+//ES5(20015)  5- The Operator (Spread Operator)
+let theOperatorSpreadFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    let array2 = [...array, 6, 7, 8];
+    for (let data of array2) {
+        console.log(data);
+    }
+}
+//theOperatorSpreadFunction()
+
+//ES5(20015)  6- Function Rest Parameter...
+
+let functionRestParameterSpreadFunction = () => {
+   function sum(...data){
+    for (let temp of data) {
+        console.log(temp);
+    }
+   }
+
+   sum(1,2,3,4,5)
+}
+//functionRestParameterSpreadFunction()
