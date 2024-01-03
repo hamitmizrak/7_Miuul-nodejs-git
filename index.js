@@ -266,6 +266,7 @@ let rezerveFunction = () => {
 // 4- for of
 // 5- The Operator (Spread Operator) ...
 // 6- Function Rest Parameter...
+// 7- Classes
 
 //ES5(20015) 1-  let,const,arrow function
 let letConstArrowFunction = () => {
@@ -311,14 +312,39 @@ let theOperatorSpreadFunction = () => {
 //theOperatorSpreadFunction()
 
 //ES5(20015)  6- Function Rest Parameter...
-
 let functionRestParameterSpreadFunction = () => {
-   function sum(...data){
-    for (let temp of data) {
-        console.log(temp);
+    function sum(...data) {
+        for (let temp of data) {
+            console.log(temp);
+        }
     }
-   }
 
-   sum(1,2,3,4,5)
+    sum(1, 2, 3, 4, 5)
 }
 //functionRestParameterSpreadFunction()
+
+
+//ES5(20015)  7- Classes
+let classesFunction = () => {
+    class Animal {
+
+        // Constructor
+        constructor(name, sound) {
+            this.name = name;
+            this.sound = sound;
+        }
+
+        // Metot Tanımla
+        makeSound() {
+            console.log(`name: ${this.name} says: ${this.sound}`);
+        } //end method
+    }// end class
+
+    const dog=new Animal('dog',"haw");
+    dog.makeSound();
+
+    const cat=new Animal('cat',"miaw");
+    cat.makeSound();
+
+} //end Function
+classesFunction();
