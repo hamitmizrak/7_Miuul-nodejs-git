@@ -116,7 +116,7 @@ let forEachFunction = () => {
 let mapFunction = () => {
     let array = [1, 2, 3, 4, 5];
     let arrayData = array.map((response) => {
-        return response*2;
+        return response * 2;
     })
     console.log(arrayData)
 
@@ -127,11 +127,70 @@ let mapFunction = () => {
 let filterFunction = () => {
     let array = [1, 2, 3, 4, 5];
     let arrayData = array.filter((response) => {
-        return response%2===0;
+        return response % 2 === 0;
     }).forEach((response) => {
         console.log(response);
     })
     //console.log(arrayData)
+}
+//filterFunction();
+
+//ES5(2009) 8-  Reduce
+let reduceFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    let sum = array.reduce((one, two) => {
+        return one + two;
+    }, 0);
+    console.log(sum);
+}
+//reduceFunction()
+
+//ES5(2009) 9-  reduceRightFunction
+let reduceRightFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    let sum = array.reduceRight((one, two) => {
+        return one + two;
+    }, 0);
+    console.log(sum);
+}
+//reduceRightFunction();
+
+//ES5(2009) 10-  Every (Her biri)
+let everyFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    let isResult = array.every((number) => {
+        return number > 0;
+    })
+    const data = (isResult) ? " Sıfırdan Büyüktür" : "sıfırdan Küçüktür";
+    console.log(data);
+}
+//everyFunction();
+
+//ES5(2009) 11-  Some (Tek bir şart)
+let someFunction = () => {
+    let array = [1, 2, 3, 9, 5];
+    let isResult = array.some((number) => {
+        return number %2===0;
+    })
+    const data = (isResult) ? " Bir tane şart sağlıyor" : "sağlamıyor";
+    console.log(data);
+}
+//someFunction();
+
+//ES5(2009) 12-  IndexOf(Soldan arama)
+let indexOfFunction = () => {
+    let array = [1, 2, 3, 9, 2];
+    let isResult = array.indexOf(2);
+    console.log("soldan arama:" +isResult);
 
 }
-filterFunction();
+indexOfFunction();
+
+//ES5(2009) 13-  LastIndexOf(SAğdan arama)
+let lastIndexOfFunction = () => {
+    let array = [1, 2, 3, 9, 2];
+    let isResult = array.lastIndexOf(2);
+    console.log("sağdan  arama:"+isResult);
+
+}
+lastIndexOfFunction();
