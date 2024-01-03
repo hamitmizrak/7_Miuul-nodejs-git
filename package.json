@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "nodemon": "nodemon index.js",
-    "nodemon_q": "nodemon index.js",
+    "nodemon_q": "nodemon -q index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

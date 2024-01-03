@@ -65,7 +65,7 @@ let trimFunction = () => {
     console.log(miuulTrim.trim());
     console.log(miuulTrim.trim().length);
 }
-trimFunction();
+//trimFunction();
 
 const personObject = function () {
     let person = {
@@ -81,10 +81,57 @@ const personObject = function () {
 let jsonStringifyParseFunction = () => {
     // stringify
     const person = personObject();
-    let stringfyObject=JSON.stringify(person);
+    let stringfyObject = JSON.stringify(person);
     console.log(stringfyObject);
 
-    let parseObject=JSON.parse(stringfyObject);
+    let parseObject = JSON.parse(stringfyObject);
     console.log(parseObject);
 }
 //jsonStringifyParseFunction()
+
+//ES5(2009) 5-  isArray
+let isArrayFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    let arrayData = Array.isArray(array);
+    console.log(arrayData);
+    if (arrayData) {
+        console.log("Dizidir");
+    } else {
+        console.log("Dizi Değildir");
+    }
+}
+//isArrayFunction();
+
+//ES5(2009) 6-  ForEach
+let forEachFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    let arrayData = array.forEach((response) => {
+        console.log(response * 2);
+    })
+
+}
+//forEachFunction();
+
+//ES5(2009) 7-  Map
+let mapFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    let arrayData = array.map((response) => {
+        return response*2;
+    })
+    console.log(arrayData)
+
+}
+//mapFunction();
+
+//ES5(2009) 7-  Filter
+let filterFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    let arrayData = array.filter((response) => {
+        return response%2===0;
+    }).forEach((response) => {
+        console.log(response);
+    })
+    //console.log(arrayData)
+
+}
+filterFunction();
