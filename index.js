@@ -24,6 +24,21 @@
 // String Access
 // multiline
 // Date.now()
+// trim()
+// JSON.stringify() JSON.parse()
+// isArray() => Array
+// ForEach() => Array
+// Map() => Array
+// Filter() => Array
+// Reduce() => Array
+// ReduceRight() => Array
+// every() => Array
+// some() => Array
+// indexOf() => Array
+// lastIndexOf()  => Array
+// getter()  => object
+// setter()  => object
+// rezerve
 
 
 //ES5(2009) 1-  "use strict";
@@ -51,13 +66,11 @@ let multiLineNowFunction = () => {
     console.log(multiLine);
 }
 
-
 //ES5(2009) 4-  Date now
 let dateNowFunction = () => {
     let currentTimeMillis = Date.now();
     console.log(currentTimeMillis);
 }
-
 
 //ES5(2009) 5-  trim();
 let trimFunction = () => {
