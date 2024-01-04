@@ -392,7 +392,7 @@ let includeStartsEndsFunction = () => {
 
     let data="Merhaba";
 
-    // Inlude
+    // Inlude(Search)
     console.log(data+" metini var mı ? "+text.includes(data));
 
     //startsWith
@@ -400,7 +400,6 @@ let includeStartsEndsFunction = () => {
 
      //endsWith
      console.log("Bununla mı bitti: "+text.endsWith(" "));
-
 
 }//end Function
 includeStartsEndsFunction();
