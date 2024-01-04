@@ -267,6 +267,8 @@ let rezerveFunction = () => {
 // 5- The Operator (Spread Operator) ...
 // 6- Function Rest Parameter...
 // 7- Classes
+// 8- Default Parameters
+// 9- Promise
 
 //ES5(20015) 1-  let,const,arrow function
 let letConstArrowFunction = () => {
@@ -326,6 +328,8 @@ let functionRestParameterSpreadFunction = () => {
 
 //ES5(20015)  7- Classes
 let classesFunction = () => {
+
+    // CLASS
     class Animal {
 
         // Constructor
@@ -340,11 +344,45 @@ let classesFunction = () => {
         } //end method
     }// end class
 
-    const dog=new Animal('dog',"haw");
+    // INSTANCE
+    const dog = new Animal('dog', "haw");
     dog.makeSound();
 
-    const cat=new Animal('cat',"miaw");
+    const cat = new Animal('cat', "miaw");
     cat.makeSound();
 
 } //end Function
-classesFunction();
+//classesFunction();
+
+//ES5(20015)  8- Defualt Parameters
+let defaultFunction = () => {
+    function greet(name = "Misafir") {
+        console.log("Merhabalar " + name);
+    }
+
+    greet();
+    greet("Nasılsınız");
+}//end Function
+//defaultFunction();
+
+//ES5(20015)  9- Promise
+let promiseFunction = () => {
+
+    function fetchData() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const success = true;
+                if (success)
+                    resolve("Veri başarı eklendi")
+                else
+                    reject("Veri alırken hata meydana geldi")
+            }, 2000);
+        })
+    } //end fetchData
+    fetchData().then((response) => {
+        console.log(" eklendi" + response);
+    }).catch((err) => {
+        console.error(err);
+    })
+}//end Function
+promiseFunction();

@@ -4,41 +4,66 @@
 # Script Start
 npm run start
 
-# Npm Codes
-```sh 
+## Npm Komutları 
+```sh
+node -v
+npm  -v
+
+# package.json oluşturmak dikkat proje ismi: 
+# 1-) küçük harflerle
+# 2-) boşluklar olmamalıdır bunun yerine (-) 
+# 3-) üğşçö kullanma
 npm init 
 npm init -y
 
-npm install
+# package.json içindeki kütüphaneleri proje dahil etmek için kullanıyoruz.
+npm install 
 npm i
 
-npm search express
+# local npm'e neler yüklemişim 
+npm list   => LOCAL
 
-npm run start
+# Global npm'e neler yüklemişim 
+npm list -g  => GLOCAL
 
-npm list
-npm list -g
+# Global npm'e neler yüklemişim 
+# --depth=0 sadece ana yüklediğim dosyaları göster 
 npm list -g --depth=0
+
+# npm Localde nereye yüklenmiş
+npm root 
+
+# npm Globalde nereye yüklenmiş.
+# C:\Users\90553\AppData\Roaming\npm\node_modules
 npm root -g
-npm outdated 
 
-npm install -g bower --save 
-npm install express --save 
-npm install express@4.18.1 --save 
-npm install lodash  --save
+# SEARCH
+# npm üzerinde arama yapmak için kullanıyoruz.
+npm search express 
+npm search mocha 
 
+# INSTALL 
+# --save (Production ortamında kurulması gerekiyor)
+npm install -g bower --save
+npm install  express --save
+npm install  express@4.18.1 --save # Semantic Version: 4.18.1 
+
+# -dev (Test ortamında kurulması)
 npm install mocha --save-dev
-npm install mocha -D
+npm install tailwindcss -D
 
-npm uninstall express
-npm update express
-npm update 
+# DELETE
+npm unistall express 
+
+# UPDATE
+npm update # Bütün bağımlılıkları güncellemek
+npm update express 
 ```
 
 ## Nodemon 
 ```sh
 normalde: node index 
-nodemonlşa birlite: nodemon index otomatikleştiriyoruz.
+nodemonla birlite: nodemon index otomatikleştiriyoruz.
 npm install 
 npm search nodemon
 npm install nodemon --save
@@ -50,7 +75,13 @@ npm install -g nodemon --save
 nodemon index.js 
 nodemon -q index.js 
 
+"scripts": {
+    "nodemon": "nodemon index.js",
+    "nodemon_q": "nodemon -q index.js",
+}
+
 npm run nodemon
+npm run nodemon_q
 ```
 
 
