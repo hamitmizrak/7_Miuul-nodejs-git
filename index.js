@@ -354,7 +354,7 @@ let classesFunction = () => {
 } //end Function
 //classesFunction();
 
-//ES5(20015)  8- Defualt Parameters
+//ES5(20015)  8- Default Parameters
 let defaultFunction = () => {
     function greet(name = "Misafir") {
         console.log("Merhabalar " + name);
@@ -367,7 +367,6 @@ let defaultFunction = () => {
 
 //ES5(20015)  9- Promise
 let promiseFunction = () => {
-
     function fetchData() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -385,4 +384,23 @@ let promiseFunction = () => {
         console.error(err);
     })
 }//end Function
-promiseFunction();
+//promiseFunction();
+
+
+let includeStartsEndsFunction = () => {
+    const text= "Merhaba, dünya ";
+
+    let data="Merhaba";
+
+    // Inlude
+    console.log(data+" metini var mı ? "+text.includes(data));
+
+    //startsWith
+    console.log("Bununla mı başladı: "+text.startsWith(data));
+
+     //endsWith
+     console.log("Bununla mı bitti: "+text.endsWith(" "));
+
+
+}//end Function
+includeStartsEndsFunction();
