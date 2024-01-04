@@ -1,9 +1,10 @@
 // Export
-
+// Function -1
 const footer1=()=>{
     console.log("Footer");
 }
 
+// Function -2
 const footer2=()=>{
     console.log(new Date().getTime());
 }
