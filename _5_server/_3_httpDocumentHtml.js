@@ -52,7 +52,6 @@ const server = http.createServer((request, response) => {
         }else{
             response.end(data);
         }
-
     }); //end readFile
 
     // END
